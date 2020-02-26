@@ -1,4 +1,4 @@
-# MS Teams docker action
+# Send a message to MS Teams action
 
 This action sends a message to MS Teams using a webhook and message you provide.
 
