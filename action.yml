@@ -14,3 +14,7 @@ runs:
   args:
     - ${{ inputs.webhook }}
     - ${{ inputs.message }}
+
+branding:
+  icon: 'mail'
+  color: 'blue'
