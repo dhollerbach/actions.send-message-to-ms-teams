@@ -1,20 +1,20 @@
-name: "Microsoft Teams Webhook Notifications"
-description: "Sends a message to your Microsoft Teams channel's incoming webhook"
+name: 'Microsoft Teams Webhook Notifications'
+description: 'Sends a message to your Microsoft Teams channel using your Incoming Webhook connector'
 inputs:
   webhook:
-    description: "Your Microsoft Teams channel's webhook id"
+    description: 'The webhook url for your Incoming Webhook connector'
     required: true
   message:
-    description: "The message you want to send to Microsoft Teams channel"
+    description: 'The message you want to send to your Microsoft Teams channel'
     required: true
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.webhook }}
     - ${{ inputs.message }}
 
 branding:
-  icon: "mail"
-  color: "blue"
+  icon: 'mail'
+  color: 'blue'
