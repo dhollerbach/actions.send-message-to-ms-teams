@@ -15,8 +15,9 @@ This action sends a message to MS Teams using a webhook and message you provide.
 ## Example usage
 
 ```
-uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.0
-with:
-  webhook: 'https://outlook.office.com/webhook/<some_giant_id>'
-  message: 'W00t it werked!'
+- name: Send message to ms teams
+  uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.2
+  with:
+    webhook: 'https://outlook.office.com/webhook/<some_giant_id>'
+    message: 'W00t it werked!'
 ```
