@@ -1,0 +1,16 @@
+name: 'Send message to ms teams'
+description: 'Sends a message to ms teams using a webhook and message you provide'
+inputs:
+  webhook:
+    description: 'Your ms teams webhook id'
+    required: true
+  message:
+    description: 'The message you want to send to ms teams'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.webhook }}
+    - ${{ inputs.message }}
