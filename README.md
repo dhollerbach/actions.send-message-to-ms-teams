@@ -18,7 +18,7 @@ This actions sends a message to your Microsoft Teams channel using an Incoming W
 
 ```
 - name: Send message to ms teams
-  uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.9
+  uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
   with:
     webhook: 'https://outlook.office.com/webhook/<some_giant_id>'
     message: 'W00t it werked!'
