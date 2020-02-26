@@ -8,12 +8,16 @@ cat << EOF > webhook.py
 import pymsteams
 import sys
 
-myTeamsMessage = pymsteams.connectorcard(sys.argv[1])
-myTeamsMessage.text(sys.argv[2])
+webhook = sys.argv[1]
+message = ' '.join(sys.argv[2:])
+
+myTeamsMessage = pymsteams.connectorcard(webhook)
+myTeamsMessage.text(message)
 myTeamsMessage.send()
 
 EOF
 
 chmod 755 webhook.py
 
+echo $message
 ./webhook.py $webhook $message
