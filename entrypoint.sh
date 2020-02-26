@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export webhook=$1
-export message=$2
+sudo export webhook=$1
+sudo export message=$2
 
 cat << EOF > webhook.py
 #!/usr/bin/python3
@@ -14,6 +14,6 @@ myTeamsMessage.send()
 
 EOF
 
-chmod 755 webhook.py
+sudo chmod 755 webhook.py
 
-./webhook.py $webhook $message
+sudo ./webhook.py $webhook $message
